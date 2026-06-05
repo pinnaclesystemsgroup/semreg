@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/">
+  <res-meta>
+    <dc:title>DataBOM Stewardship Metadata</dc:title>
+    <dc:description>What stewardship metadata attributes are required for ADAPT data governance?</dc:description>
+    <dc:creator>P. Isaac Riley</dc:creator>
+    <dcterms:created>2026-06-05T00:00:00Z</dcterms:created>
+  </res-meta>
+  <map>
+    <concept-list>
+      <concept id="C0006001" label="DataCustodyRecord" long-comment="A record documenting the chain of custody for agricultural data, including originator attestation, transfer events, and cryptographic integrity verification."/>
+      <concept id="C0006010" label="PurposeClassification" long-comment="A classification scheme for the intended purpose of agricultural data collection and use, aligned with XACML policy enforcement."/>
+      <concept id="C0006020" label="MethodologyVersion" long-comment="A versioned reference to the scientific or regulatory methodology applied during agricultural data collection, enabling reproducibility and statutory protection against science-driven devaluation."/>
+      <concept id="C0006030" label="PolicyEnforcement" long-comment="Mechanisms for enforcing data governance policies including XACML policy references, attestation levels, and statutory buffer pool requirements."/>
+      <concept id="C0006002" label="OriginatorAttestation" long-comment="A signed declaration by the data originator confirming the provenance, collection conditions, and completeness of an agricultural data record."/>
+      <concept id="C0006003" label="TransferCustodyEvent" long-comment="A recorded event documenting the transfer of data custody from one party to another, including timestamp, parties involved, and transfer conditions."/>
+      <concept id="C0006004" label="CustodyChainHash" long-comment="A cryptographic hash of the complete custody chain, enabling tamper-evident verification of data provenance integrity."/>
+      <concept id="C0006011" label="PrimaryAgriculturalPurpose" long-comment="Classification of data collected primarily for agricultural production management including planting, application, and harvest operations."/>
+      <concept id="C0006012" label="CompliancePurpose" long-comment="Classification of data collected or processed for regulatory compliance including FSA reporting, crop insurance, and conservation program documentation."/>
+      <concept id="C0006013" label="CommercialPurpose" long-comment="Classification of data collected or processed for commercial transactions including carbon credit attestation, commodity grading, and supply chain traceability."/>
+      <concept id="C0006021" label="CarbonMethodologyRef" long-comment="A versioned reference to the carbon accounting methodology applied during data collection, required for carbon credit attestation and statutory protection against methodology-driven devaluation."/>
+      <concept id="C0006022" label="YieldNormalizationMethodRef" long-comment="A versioned reference to the yield normalization methodology applied during data processing, enabling reproducible comparison across growing seasons and geographies."/>
+      <concept id="C0006031" label="XACMLPolicyURI" long-comment="A resolvable URI reference to the XACML 3.0 policy document governing permitted uses of an agricultural data record under the AgDataCM framework."/>
+      <concept id="C0006032" label="AttestationLevel" long-comment="An ordinal classification of the verification strength applied to an agricultural data record, ranging from self-attested producer declaration to hardware-anchored ZTI attestation."/>
+      <concept id="C0006033" label="StatutoryBufferPool" long-comment="A mandatory 10 percent stability reserve indemnifying agricultural lenders against carbon credit devaluation, ensuring 1:1 collateral coverage per the CeR/CAU framework."/>
+    </concept-list>
+    <linking-phrase-list>
+      <linking-phrase id="P1" label="is a type of"/>
+      <linking-phrase id="P2" label="is a type of"/>
+      <linking-phrase id="P3" label="is a type of"/>
+      <linking-phrase id="P4" label="is a type of"/>
+      <linking-phrase id="P5" label="is a type of"/>
+      <linking-phrase id="P6" label="is a type of"/>
+      <linking-phrase id="P7" label="is a type of"/>
+      <linking-phrase id="P8" label="is a type of"/>
+      <linking-phrase id="P9" label="is a type of"/>
+      <linking-phrase id="P10" label="is a type of"/>
+      <linking-phrase id="P11" label="is a type of"/>
+    </linking-phrase-list>
+    <connection-list>
+      <connection id="L1" from-id="C0006002" to-id="P1"/>
+      <connection id="L2" from-id="P1" to-id="C0006001"/>
+      <connection id="L3" from-id="C0006003" to-id="P2"/>
+      <connection id="L4" from-id="P2" to-id="C0006001"/>
+      <connection id="L5" from-id="C0006004" to-id="P3"/>
+      <connection id="L6" from-id="P3" to-id="C0006001"/>
+      <connection id="L7" from-id="C0006011" to-id="P4"/>
+      <connection id="L8" from-id="P4" to-id="C0006010"/>
+      <connection id="L9" from-id="C0006012" to-id="P5"/>
+      <connection id="L10" from-id="P5" to-id="C0006010"/>
+      <connection id="L11" from-id="C0006013" to-id="P6"/>
+      <connection id="L12" from-id="P6" to-id="C0006010"/>
+      <connection id="L13" from-id="C0006021" to-id="P7"/>
+      <connection id="L14" from-id="P7" to-id="C0006020"/>
+      <connection id="L15" from-id="C0006022" to-id="P8"/>
+      <connection id="L16" from-id="P8" to-id="C0006020"/>
+      <connection id="L17" from-id="C0006031" to-id="P9"/>
+      <connection id="L18" from-id="P9" to-id="C0006030"/>
+      <connection id="L19" from-id="C0006032" to-id="P10"/>
+      <connection id="L20" from-id="P10" to-id="C0006030"/>
+      <connection id="L21" from-id="C0006033" to-id="P11"/>
+      <connection id="L22" from-id="P11" to-id="C0006030"/>
+    </connection-list>
+  </map>
+</cmap>
