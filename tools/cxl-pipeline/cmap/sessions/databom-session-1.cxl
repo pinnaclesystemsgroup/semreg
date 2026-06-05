@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <res-meta>
+    <dc:title>DataBOM Stewardship Metadata Session 1</dc:title>
+    <dc:description>What stewardship metadata attributes
+      are required for ADAPT data custody?</dc:description>
+    <dc:creator>P. Isaac Riley</dc:creator>
+  </res-meta>
+  <map>
+    <concept-list>
+      <concept id="C1" label="DataCustodyRecord"/>
+      <concept id="C2" label="OriginatorAttestation"/>
+      <concept id="C3" label="TransferCustodyEvent"/>
+      <concept id="C4" label="PurposeClassification"/>
+      <concept id="C5" label="PolicyEnforcement"/>
+    </concept-list>
+    <linking-phrase-list>
+      <linking-phrase id="P1" label="consists of"/>
+      <linking-phrase id="P2" label="consists of"/>
+      <linking-phrase id="P3" label="is related to"/>
+    </linking-phrase-list>
+    <connection-list>
+      <connection id="L1" from-id="C1" to-id="P1"/>
+      <connection id="L2" from-id="P1" to-id="C2"/>
+      <connection id="L3" from-id="C1" to-id="P2"/>
+      <connection id="L4" from-id="P2" to-id="C3"/>
+      <connection id="L5" from-id="C4" to-id="P3"/>
+      <connection id="L6" from-id="P3" to-id="C5"/>
+    </connection-list>
+  </map>
+</cmap>
